@@ -16,9 +16,10 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/color/color2.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="content">
       <div class="row">
         <div class="col-8 p-0 m-0">
           <div class="box1">
@@ -26,62 +27,62 @@
               <div class="box1-menu-item">
                 <span>/\</span>
                 <a href="./hotdrink.html">Hot Drinks</a>
-                <a href="#">Cold Drinks</a>
-                <a href="./breakfast.html">BreakfastDrinks</a>
+                <a href="./colddrink.html">Cold Drinks</a>
+                <a href="./breakfast.html">Breakfast Drinks</a>
                 <a href="./lunch.html">Lunch</a>
                 <a href="./kids.html">Kids</a>
-                <a href="./displaytakeaway.html"> DisplayTakeAway </a>
+                <a href="./displaytakeaway.html">Display TakeAway</a>
                 <a href="./retail.html">Retail</a>
                 <span>\/</span>
               </div>
               <div class="box1-menu-main">
                 <div class="box1-menu-main-item1">
-                  <button class="">StillWater600ml</button>
-                  <button class="">Red Bull</button>
-                  <button class="">Fizzy Bottle</button>
-                  <button class="">Garatorade</button>
-                  <button class="">Kombucha</button>
-                  <button class="">Pop Tops</button>
+                  <button onclick="addItem('StillWater600m', this)">StillWater600m</button>
+                  <button onclick="addItem('RedBulCansLarge', this)">RedBulCansLarge</button>
+                  <button onclick="addItem('FizzyBottle', this)">Fizzy Bottle</button>
+                  <button onclick="addItem('Garatorade', this)">Garatorade</button>
+                  <button onclick="addItem('Kombucha', this)">Kombucha</button>
+                  <button onclick="addItem('PopTops', this)">Pop Tops</button>
                 </div>
                 <div class="box1-menu-main-item2">
-                  <button>Strange Love</button>
-                  <button>Coolridge</button>
-                  <button>Redbull</button>
-                  <button>T2icedpeach</button>
-                  <button>Monster</button>
-                  <button>Flavouredwwater</button>
+                  <button onclick="addItem('StrangeLoveSparkling', this)" style="font-size: 10px;">StrangeLoveSparkling</button>
+                  <button onclick="addItem('CoolridgeSparkling', this)" style="font-size: 10px;">CoolridgeSparkling</button>
+                  <button onclick="addItem('RedbullSmall', this)">RedbullSmall</button>
+                  <button onclick="addItem('T2icedpeach', this)">T2icedpeach</button>
+                  <button onclick="addItem('Monster', this)">Monster</button>
+                  <button onclick="addItem('Flavouredwwater', this)">Flavouredwwater</button>
                 </div>
                 <div class="box1-menu-main-item3">
-                  <button>Breakfastsmoothie</button>
-                  <button>Berry Smoothie</button>
-                  <button>Green Smoothie</button>
-                  <button>Mango Smoothie</button>
+                  <button onclick="addItem('Breakfastsmoothie', this)">Breakfastsmoothie</button>
+                  <button onclick="addItem('BerrySmoothie', this)">Berry Smoothie</button>
+                  <button onclick="addItem('GreenSmoothie', this)">Green Smoothie</button>
+                  <button onclick="addItem('MangoSmoothie', this)">Mango Smoothie</button>
                   <button>.</button>
-                  <button>Garatorade1L</button>
+                  <button onclick="addItem('Garatorade1L', this)">Garatorade1L</button>
                 </div>
                 <div class="box1-menu-main-item4">
-                  <button>Juice</button>
+                  <button onclick="addItem('Juice', this)">Juice</button>
                   <button>.</button>
                   <button>.</button>
                   <button>.</button>
-                  <button>No Ice</button>
-                  <button>NO Cream</button>
+                  <button onclick="addItem('NoIce', this)">No Ice</button>
+                  <button onclick="addItem('NOCream', this)">NO Cream</button>
                 </div>
                 <div class="box1-menu-main-item5">
-                  <button>Milk Shake</button>
-                  <button>Thick Shake</button>
-                  <button>.</button>
-                  <button>.</button>
-                  <button>.</button>
-                  <button>LessChocolate</button>
+                  <button onclick="addItem('MilkShake', this)">Milk Shake</button>
+            <button onclick="addItem('ThickShake', this)">Thick Shake</button>
+            <button>.</button>
+            <button>.</button>
+            <button>.</button>
+            <button onclick="addItem('LessChocolate', this)">LessChocolate</button>
                 </div>
                 <div class="box1-menu-main-item6">
-                  <button>Iced Coffee</button>
-                  <button>Iced chocolate</button>
-                  <button>Spanish Iced</button>
-                  <button>Bumble Bee</button>
-                  <button>Iced Chai</button>
-                  <button>Iced mocha</button>
+                  <button onclick="addItem('IcedCoffee', this)">Iced Coffee</button>
+                  <button onclick="addItem('IcedChocolate', this)">Iced chocolate</button>
+                  <button onclick="addItem('SpanishIced', this)">Spanish Iced</button>
+                  <button onclick="addItem('BumbleBee', this)">Bumble Bee</button>
+                  <button onclick="addItem('IcedChai', this)">Iced Chai</button>
+                  <button onclick="addItem('IcedMocha', this)">Iced mocha</button>
                 </div>
                 <div class="box1-menu-main-item7">
                   <button>.</button>
@@ -210,13 +211,13 @@
                 <span></span>
                 <span>$Price</span>
               </div>
-              <div class="box-right-1-main">ádadassa</div>
+              <div class="box-right-1-main"></div>
               <div class="box-right-1-footer1 d-flex">
                 <button>Void</button>
-                <button>Void ALL</button>
-                <button>Void ALL</button>
-                <button>Void ALL</button>
-                <button>Send Order</button>
+                <button onclick="clearOrder()">Void ALL</button>
+                <button onclick="clearOrder()">Void ALL</button>
+                <button onclick="clearOrder()">Void ALL</button>
+                <button >Send Order</button>
               </div>
               <div class="box-right-1-footer2"></div>
             </div>
@@ -253,5 +254,7 @@
         </div>
       </div>
     </div>
+    <script src="./js/all.js"></script>
+    <script src="./js/colddrink.js"></script>
   </body>
 </html>

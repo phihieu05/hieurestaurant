@@ -16,6 +16,7 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/color/color4.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -27,21 +28,22 @@
                 <span>/\</span>
                 <a href="./hotdrink.html">Hot Drinks</a>
                 <a href="./colddrink.html">Cold Drinks</a>
-                <a href="./breakfast.html">BreakfastDrinks</a>
-                <a href="#">Lunch</a>
+                <a href="./breakfast.html">Breakfast Drinks</a>
+                <a href="./lunch.html">Lunch</a>
                 <a href="./kids.html">Kids</a>
-                <a href="./displaytakeaway.html"> DisplayTakeAway </a>
+                <a href="./displaytakeaway.html">Display TakeAway</a>
                 <a href="./retail.html">Retail</a>
                 <span>\/</span>
               </div>
               <div class="box1-menu-main">
                 <div class="box1-menu-main-item1">
-                  <button>SchnitzelClub</button>
-                  <button>FalafelBowl</button>
-                  <button>Big Beefy</button>
-                  <button>Chicken Avo</button>
-                  <button>Greek Lamb</button>
-                  <button>BowfofChips</button>
+                  <button onclick="addItem('SchnitzelClubSandwich', this)" style="font-size: 10px;">SchnitzelClubSandwich</button>
+<button onclick="addItem('FalafelBowl', this)">Falafel Bowl</button>
+<button onclick="addItem('BigBeefy', this)">Big Beefy</button>
+<button onclick="addItem('ChickenAvo', this)">Chicken Avo</button>
+<button onclick="addItem('GreekLambBurger', this)" style="font-size: 10px;">GreekLambBurger</button>
+<button onclick="addItem('BowlOfChips', this)">Bowl of Chips</button>
+
                 </div>
                 <div class="box1-menu-main-item2">
                   <button>.</button>
@@ -60,12 +62,13 @@
                   <button>.</button>
                 </div>
                 <div class="box1-menu-main-item4">
-                  <button>TomatoRelish</button>
-                  <button>Mayonaise</button>
-                  <button>BBQ Sauce</button>
-                  <button>Mexican</button>
-                  <button>Beetroot Relish</button>
-                  <button>Aioli</button>
+                  <button onclick="addItem('TomatoRelish', this)">Tomato Relish</button>
+<button onclick="addItem('Mayonnaise', this)">Mayonnaise</button>
+<button onclick="addItem('BBQSauce', this)">BBQ Sauce</button>
+<button onclick="addItem('Mexican', this)">Mexican</button>
+<button onclick="addItem('BeetrootRelish', this)">Beetroot Relish</button>
+<button onclick="addItem('Aioli', this)">Aioli</button>
+
                 </div>
                 <div class="box1-menu-main-item5">
                   <button>.</button>
@@ -210,13 +213,13 @@
                 <span></span>
                 <span>$Price</span>
               </div>
-              <div class="box-right-1-main">ádadassa</div>
+              <div class="box-right-1-main"></div>
               <div class="box-right-1-footer1 d-flex">
                 <button>Void</button>
-                <button>Void ALL</button>
-                <button>Void ALL</button>
-                <button>Void ALL</button>
-                <button>Send Order</button>
+                <button onclick="clearOrder()">Void ALL</button>
+                <button onclick="clearOrder()">Void ALL</button>
+                <button onclick="clearOrder()">Void ALL</button>
+                <button >Send Order</button>
               </div>
               <div class="box-right-1-footer2"></div>
             </div>
@@ -253,5 +256,7 @@
         </div>
       </div>
     </div>
+    <script src="./js/all.js"></script>
+    <script src="./js/lunch.js"></script>
   </body>
 </html>

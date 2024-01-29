@@ -16,60 +16,89 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/color/color1.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="content">
       <div class="row">
         <div class="col-8 p-0 m-0">
           <div class="box1">
             <div class="box1-menu d-flex">
               <div class="box1-menu-item">
                 <span>/\</span>
-                <a href="#">Hot Drinks</a>
+                <a href="./hotdrink.html">Hot Drinks</a>
                 <a href="./colddrink.html">Cold Drinks</a>
-                <a href="./breakfast.html">BreakfastDrinks</a>
+                <a href="./breakfast.html">Breakfast Drinks</a>
                 <a href="./lunch.html">Lunch</a>
                 <a href="./kids.html">Kids</a>
-                <a href="./displaytakeaway.html"> DisplayTakeAway </a>
+                <a href="./displaytakeaway.html">Display TakeAway</a>
                 <a href="./retail.html">Retail</a>
                 <span>\/</span>
               </div>
               <div class="box1-menu-main">
                 <div class="box1-menu-main-item1">
-                  <button class="cl-violet">Small</button>
-                  <button class="cl-violet">Medium</button>
-                  <button class="cl-violet">Large</button>
-                  <button class="cl-orange">Keep Cup</button>
-                  <button class="cl-green">Iced Latte</button>
-                  <button class="cl-green">Ice Long</button>
+                  <button onclick="selectSize('Small')">Small</button>
+                  <button onclick="selectSize('Medium')">Medium</button>
+                  <button onclick="selectSize('Large')">Large</button>
+                  <button onclick="addItem('Keep Cup', this)">Keep Cup</button>
+                  <button onclick="addItem('Iced Latte', this)">
+                    Iced Latte
+                  </button>
+                  <button onclick="addItem('Ice Long', this)">Ice Long</button>
                 </div>
                 <div class="box1-menu-main-item2">
-                  <button>Latle</button>
-                  <button>Cappuccino</button>
-                  <button>FlatWhite</button>
-                  <button>Long Black</button>
-                  <button>SingleEs presso</button>
-                  <button>Double Espresso</button>
+                  <button onclick="addItem('Latte', this)">Latte</button>
+                  <button onclick="addItem('Cappuccino', this)">
+                    Cappuccino
+                  </button>
+                  <button onclick="addItem('FlatWhite', this)">
+                    FlatWhite
+                  </button>
+                  <button onclick="addItem('Long Black', this)">
+                    Long Black
+                  </button>
+                  <button onclick="addItem('Single Es', this)">
+                    Single Es
+                  </button>
+                  <button onclick="addItem('Double Es', this)">
+                    Double Es
+                  </button>
                 </div>
-                <div class="box1-menu-main-item3">
-                  <button>Magic</button>
-                  <button>Piccolo</button>
-                  <button>Long Mac</button>
-                  <button>Short Mac</button>
-                  <button>Hot chocolate</button>
-                  <button>Mocha</button>
+                <div class="box1-menu-main-item3 hd">
+                  <button onclick="addItem('Magic', this)">Magic</button>
+                  <button onclick="addItem('Piccolo', this)">Piccolo</button>
+                  <button onclick="addItem('Long Mac', this)">Long Mac</button>
+                  <button onclick="addItem('Short Mac', this)">
+                    Short Mac
+                  </button>
+                  <button onclick="addItem('Hot chocolate', this)">
+                    Hot chocolate
+                  </button>
+                  <button onclick="addItem('Mocha', this)">Mocha</button>
                 </div>
                 <div class="box1-menu-main-item4">
-                  <button>Leaf Chat</button>
-                  <button>Powder Chat</button>
-                  <button>Turmeric Latte</button>
-                  <button>Dirty Chat</button>
-                  <button>Match</button>
-                  <button>Batch Brew</button>
+                  <button onclick="addItem('Leaf Chai', this)">
+                    Leaf Chai
+                  </button>
+                  <button onclick="addItem('Powder Chai', this)">
+                    Powder Chai
+                  </button>
+                  <button onclick="addItem('Turmeric Latte', this)">
+                    Turmeric Latte
+                  </button>
+                  <button onclick="addItem('Dirty Chai', this)">
+                    Dirty Chai
+                  </button>
+                  <button onclick="addItem('Match', this)">Match</button>
+                  <button onclick="addItem('Batch Brew', this)">
+                    Batch Brew
+                  </button>
                 </div>
                 <div class="box1-menu-main-item5">
-                  <button style="background-color: #22a9aa">Tea by Pot</button>
-                  <button style="background-color: var(--green-color)">
+                  <button onclick="addItem('Tea by Pot', this)">
+                    Tea by Pot
+                  </button>
+                  <button onclick="addItem('Early Bird Deal', this)">
                     Early Bird Deal
                   </button>
                   <button>.</button>
@@ -84,6 +113,11 @@
                   <button>Iced</button>
                   <button>Kids</button>
                   <button>Baby Chino</button>
+                  <!-- <button onclick="addItem('Hmos', this)">Hmos</button>
+                  <button onclick="addItem('Cmos', this)">Cmos</button>
+                  <button onclick="addItem('Iced', this)">Iced</button>
+                  <button onclick="addItem('Kids', this)">Kids</button>
+                  <button onclick="addItem('Baby Chino', this)">Baby Chino</button> -->
                 </div>
                 <div class="box1-menu-main-item7">
                   <button>Takeaway</button>
@@ -212,18 +246,20 @@
                 <span></span>
                 <span>$Price</span>
               </div>
-              <div class="box-right-1-main">ádadassa</div>
+              <div class="box-right-1-main">
+                <div class="box-right-1-main-item"></div>
+              </div>
               <div class="box-right-1-footer1 d-flex">
                 <button>Void</button>
-                <button>Void ALL</button>
-                <button>Void ALL</button>
-                <button>Void ALL</button>
+                <button onclick="clearOrder()">Void ALL</button>
+                <button onclick="clearOrder()">Void ALL</button>
+                <button onclick="clearOrder()">Void ALL</button>
                 <button>Send Order</button>
               </div>
               <div class="box-right-1-footer2"></div>
             </div>
             <div class="box-right-2">
-              <div class="box-right-2-item1 calculator ">
+              <div class="box-right-2-item1 calculator">
                 <button>$5</button>
                 <button>7</button>
                 <button>8</button>
@@ -250,10 +286,13 @@
                 <button>0</button>
                 <button>.</button>
                 <button>Cash</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script src="./js/all.js"></script>
+    <script src="./js/hotdrink.js "></script>
   </body>
 </html>

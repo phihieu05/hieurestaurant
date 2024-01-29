@@ -16,9 +16,10 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/color/color3.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="content">
       <div class="row">
         <div class="col-8 p-0 m-0">
           <div class="box1">
@@ -27,32 +28,32 @@
                 <span>/\</span>
                 <a href="./hotdrink.html">Hot Drinks</a>
                 <a href="./colddrink.html">Cold Drinks</a>
-                <a href="#">BreakfastDrinks</a>
+                <a href="./breakfast.html">Breakfast Drinks</a>
                 <a href="./lunch.html">Lunch</a>
                 <a href="./kids.html">Kids</a>
-                <a href="./displaytakeaway.html"> DisplayTakeAway </a>
+                <a href="./displaytakeaway.html">Display TakeAway</a>
                 <a href="./retail.html">Retail</a>
                 <span>\/</span>
               </div>
               <div class="box1-menu-main">
                 <div class="box1-menu-main-item1">
-                  <button>Egg on toast</button>
-                  <button>Fruit toast</button>
-                  <button>Just toast</button>
-                  <button>Corn fritters</button>
-                  <button>Salmon baget</button>
-                  <button>French toast</button>
+                  <button onclick="addItem('EggOnToast', this)">Egg on toast</button>
+                  <button onclick="addItem('FruitToast', this)">Fruit toast</button>
+                  <button onclick="addItem('JustToast', this)">Just toast</button>
+                  <button onclick="addItem('CornFritters', this)">Corn fritters</button>
+                  <button onclick="addItem('SalmonBagel', this)">Salmon bagel</button>
+                  <button onclick="addItem('FrenchToast', this)">French toast</button>
                 </div>
                 <div class="box1-menu-main-item2">
-                  <button>Biggie For 1</button>
-                  <button>Greenie</button>
-                  <button>Huevos</button>
-                  <button>Smashed Avo</button>
-                  <button>Egg Benedict</button>
-                  <button>Granota</button>
+                  <button onclick="addItem('BiggieFor1', this)">Biggie For 1</button>
+                  <button onclick="addItem('Greenie', this)">Greenie</button>
+                  <button onclick="addItem('Huevos', this)">Huevos</button>
+                  <button onclick="addItem('SmashedAvo', this)">Smashed Avo</button>
+                  <button onclick="addItem('EggBenedict', this)">Egg Benedict</button>
+                  <button onclick="addItem('Granola', this)">Granola</button>                  
                 </div>
                 <div class="box1-menu-main-item3">
-                  <button>Breakfastwaffies</button>
+                  <button onclick="addItem('Breakfastwaffies', this)">Breakfastwaffies</button>
                   <button>.</button>
                   <button>.</button>
                   <button>.</button>
@@ -61,27 +62,30 @@
                 </div>
                 <div class="box1-menu-main-item4">
                   <button>SIDES ONLY</button>
-                  <button>Add Poached</button>
-                  <button>Fried</button>
-                  <button>Scrambled</button>
-                  <button>Bacon</button>
-                  <button>Avocado</button>
+<button onclick="addItem('AddPoached', this)">Add Poached</button>
+<button onclick="addItem('Fried', this)">Fried</button>
+<button onclick="addItem('Scrambled', this)">Scrambled</button>
+<button onclick="addItem('Bacon', this)">Bacon</button>
+<button onclick="addItem('Avocado', this)">Avocado</button>
+
                 </div>
                 <div class="box1-menu-main-item5">
-                  <button>Mushroom</button>
-                  <button>GrilledTomato</button>
-                  <button>Spinach</button>
-                  <button>Wilted Green</button>
-                  <button>Hashbrown</button>
-                  <button>GrilledChorizo</button>
+                  <button onclick="addItem('Mushroom', this)">Mushroom</button>
+<button onclick="addItem('GrilledTomato', this)">Grilled Tomato</button>
+<button onclick="addItem('Spinach', this)">Spinach</button>
+<button onclick="addItem('WiltedGreen', this)">Wilted Green</button>
+<button onclick="addItem('Hashbrown', this)">Hashbrown</button>
+<button onclick="addItem('GrilledChorizo', this)">Grilled Chorizo</button>
+
                 </div>
                 <div class="box1-menu-main-item6">
-                  <button>Fetta</button>
-                  <button>Goat Cheese</button>
-                  <button>Haloumi</button>
-                  <button>Extra piece</button>
-                  <button>House beanz</button>
-                  <button>Hollondaise</button>
+                  <button onclick="addItem('Fetta', this)">Fetta</button>
+<button onclick="addItem('GoatCheese', this)">Goat Cheese</button>
+<button onclick="addItem('Haloumi', this)">Haloumi</button>
+<button onclick="addItem('ExtraPiece', this)">Extra piece</button>
+<button onclick="addItem('HouseBeanz', this)">House beanz</button>
+<button onclick="addItem('Hollondaise', this)">Hollandaise</button>
+
                 </div>
                 <div class="box1-menu-main-item7">
                   <button>Takeaway</button>
@@ -195,7 +199,7 @@
               <button class="cl-blue">Split Check</button>
             </div>
           </div>
-        </div>
+        </div>2
         <div class="col-4 p-0">
           <div class="box-right">
             <div class="box-right-1">
@@ -210,13 +214,13 @@
                 <span></span>
                 <span>$Price</span>
               </div>
-              <div class="box-right-1-main">ádadassa</div>
+              <div class="box-right-1-main"></div>
               <div class="box-right-1-footer1 d-flex">
                 <button>Void</button>
-                <button>Void ALL</button>
-                <button>Void ALL</button>
-                <button>Void ALL</button>
-                <button>Send Order</button>
+                <button onclick="clearOrder()">Void ALL</button>
+                <button onclick="clearOrder()">Void ALL</button>
+                <button onclick="clearOrder()">Void ALL</button>
+                <button >Send Order</button>
               </div>
               <div class="box-right-1-footer2"></div>
             </div>
@@ -253,5 +257,8 @@
         </div>
       </div>
     </div>
+
+    <script src="./js/all.js "> </script>
+    <script src="./js/breakfast.js"></script>
   </body>
 </html>
